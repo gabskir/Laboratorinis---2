@@ -1,6 +1,6 @@
 # Laboratorinis-1
 
-## v0.2 ##
+## v0.4 ##
 
 ### Programos veikimas ###
 Vartotojas klausiamas ar nori generuoti failą su studentų duomenimis (galimi du pasirinkimai - 't' arba 'n') <br>
