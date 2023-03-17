@@ -1,5 +1,46 @@
 # Laboratorinis-1
 
+## v0.2 ##
+
+### Programos veikimas ###
+Vartotojas klausiamas ar nori generuoti failą su studentų duomenimis (galimi du pasirinkimai - 't' arba 'n')
+    1. Paspaudus 'n' vartotojas renkasi ar nori duomenis skaityti iš failo (galimi du pasirinkimai - 't' arba 'n')
+        1.1. Pasirinkus 't':
+           1.1.1. Vartotojo paklausiama ar studentus rūšiuoti pagal pavardę:
+           - paspaudus 't' rezultate studentai bus surūšiuoti pagal pavardes
+           - paspaudus 'n' - pagal vardus
+           1.1.2. Konsolėje atspausdinamas sąrašas ".txt" failų, iš kurių galima skaityti duomenis. Vartotojas turi nurodyti failo, iš kurio bus nuskaityti duomenys,               numerį.
+           1.1.3. Duomenis nuskaičius ir surūšiavus pagal vartotojo pasirinkimus, rezultatui padalinami į du failus (studentų, kurių vidurkis nemažiau nei 5, duomenys              įrašomi į failą "broliaiSaunuoliai.txt", o studentų, kurių vidurkis mažiau už 5, duomenys įrašomi į failą "pasidaveliai.txt").
+        1.2. Paspaudus 'n':
+            1.2.1. Vartotojas suveda maksimalų namų darbų pažymių kiekį, kuris bus taikomas visiems studentams.
+            1.2.2. Studentų kiekis - nefiksuotas, tad norėdamas pridėti naują studentą vartotojas turi įvesti "t", jeigu naujo studento duomenų įvesti nenori turi                  įvesti "n".
+             - Vartotojui neįvedus nei vieno studento duomenų ir įvedus "n" programa baigia darbą.
+            1.2.3. Paspaudus "t" vartotojas turi suvesti studento vardą ir pavardę.
+            1.2.4. Vartotojas turi pasirinkti ar nori egzamino ir namų darbų įvertinimus generuoti atsitiktinai ar suvesti ranka.
+             - Pažymių generavimui vartotojas turi įvesti "t". Pažymiai sugeneruojami ir išspausdinami konsolėje.
+             - Pažymių vedimui ranka vartotojas turi įvesti "n". Programa leis įvedinėti pažymius tol, kol bus pasiektas anksčiau nurodytas maksimalus namų darbų                    įvertinimų kiekis. Nepasiekus maksimalaus pažymių kiekio ir paspaudus "n" pažymių vedimas bus sustabdytas. Jei suvestas namų darbų įvertinimo kiekis                    nesieks anksčiau nurodyto maksimalaus, programa likusius pažymius įves kaip "0". Tuomet vartotojas įveda egzamino įvertinimą.
+            1.2.5. Vartotojas vėl klausiamas ar nori įvesti dar vieno studento duomenis. Žingsniai 1.2.3. - 1.2.4. kartojasi, kol vartotojas paspaus "n" ir taip                    nurodys, kad duomenų vedimą baigė.
+            1.2.6. Vartotojui įvedus "n" ir taip nurodžius, kad duomenų įvedimą baigė, jis turi pasirinkti ar nori studentus surūšiuoti pagal pavardes.
+             - Rūšiavimui pagal pavardes vartotojas turi įvesti "t"
+             - Rūšiavimui pagal vardus vartotojas turi įvesti "n"
+            1.2.7. Priklausomai nuo 1.2.6. pasirinkimo rezultatai bus surūšiuoti pagal vardus arba pavardes ir išspausdinti konsolėje kartu su galutiniais pažymiais                (apskaičiuotais su vidurkiu ir mediana).
+    2. Paspaudus 't' vartotojas turi nurodyti norimą failo pavadinimą, pažymių ir studentų kiekį faile. Pasibaigus failo generavimui į ekraną išspausdinamas sąrašas        galimų tolimesnių vartotojų pasirinkimų.
+        2.1. Vartotojui įvedus "1"  bus vėl prašoma įvesti norimą failo pavadinimą, pažymių ir studentų kiekį faile, bus generuojamas naujas ir išspausdinamas tas pats         veiksmų sąrašas. Šis veiksmas kartosis, kol vartotojas neįves kito pasirinkimo.
+        2.2. Vartotojui įvedus "2" programa baigs darbą.
+        2.3. Vartotojui įvedus "3" bus vykdomi žingsniai 1.1.1. bei 1.1.2. ir nuskaityti bei surūšiuoti duomenys bus padalinami į du failus (priklausomai nuo studentų          vidurkių: "broliaiSaunuoliai.txt" ir "pasidaveliai.txt"
+        2.4. Vartotojui įvedus "4" vykdomas punktas 1.2.
+
+
+### Programos testavimas
+|                     |       1000      |      10000     |     100000    |   1000000   |   10000000   |
+| ------------------- | --------------- | -------------- | ------------- | ----------- | ----------- |
+|Failo generavimas   |   0.0303452  s  |   0.102106 s  |    0.824036 s  |  7.96071 s  |  80.1372 s  |
+|Skaitymas is failo    |   0.0032261  s  |   0.0272434 s  |  0.170525 s  | 1.25535 s  |  20.7577 s  |
+|Rusiavimas pagal pavarde    |      0.001619 s  |   0.010267 s  |   0.099160 s  |  1.114441 s  |  16.855181 s  |
+|Studentu dalinimas    |     0.000293 s  |   0.002089 s  |    0.022345 s  |  0.195857 s  |  0.914156 s  |
+|Spausdinimas i du failus     |    0.039980 s  |   0.094185 s  |   2.756213 s  |  8.671647 s  |  45.070223 s  |
+|Visos programos veikimo laikas     |      0.120274 s  |   0.131408 s  |   0.911197 s  |  8.187703 s  |  83.717092 s  |
+
 ## v0.3 ##
 Programos funkcionalumas nepakito nuo 0.2 versijos (tik pridėtas exeption handling void skaitymas() funkcijoje).
 
