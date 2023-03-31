@@ -4,29 +4,39 @@
 ### Programos veikimas ###
 
 Programos funkcionalumas nepakito nuo 0.4 versijos. Kodas perrašytas naudojant tris skirtingus konteinerius: 
-- std::vecotr
+- std::vector
 - std::list
-- std::deque
+- std::deque <br>
 ir išsaugotas atskiruose aplankaluose, kad būtų galima efektyviai patikrinti programos veikimo spartą.
 
 ### Testavimo sistemos parametrai ###
 
-**CPU**
+**CPU** <br>
 11th Gen Intel(R) Core (TM) i7-11370H @ 3.30GHz
-- *Base speed* 3.00 GHz
-- *Cores* 4
-- *Logical processors* - 8
+- *Base speed*: 3.00 GHz
+- *Cores*:4
+- *Logical processors*:8
 
 **RAM**
-- *Speed* 3200 MHz
+- *Speed*: 3200 MHz
 
 **Disk**
-- *Type* SSD
-- *Capacity* 477GB
+- *Type*: SSD
+- *Capacity*: 477GB
 
 ### Testavimo rezultatai ###
 
-
+|                     |       1000      |      10000     |     100000    |   1000000   |   10000000  |
+| ------------------- | --------------- | -------------- | ------------- | ----------- | ----------- |
+|VECTOR NUSKAITYMAS   |   0.0045687 s  |  0.0299799 s  |    0.21992 s  |  2.17431 s  |  21.2355 s |
+|VECTOR RŪŠIAVIMAS PAGAL PAVARDES    |   0.000856 s  |  0.005860 s  |  0.092310 s  | 1.182300 s  |  18.303149 s |
+|VECTOR SKIRSTYMAS Į DVI GRUPES    |   0.000434 s  |  0.001352 s  |  0.013010 s  | 0.099363 s  |  1.144726 s |
+|DEQUE NUSKAITYMAS    |     0.0074389 s  |   0.028635 s  |    0.202629 s  | 2.16422 s  |  23.2499 s |
+|DEQUE RŪŠIAVIMAS PAGAL PAVARDES    |   0.001059 s  |  0.007357 s  |  0.114631 s  | 1.806220 s  | 19.157075 s |
+|DEQUE SKIRSTYMAS Į DVI GRUPES    |   0.000172 s  |  0.002472 s  |  0.012201 s  | 0.112860 s  |  0.916867 s |
+|LIST NUSKAITYMAS     |     0.0070122 s  |  0.023791 s  |  0.218323 s  |  2.25188 s  |   23.1721 s |
+|LIST RŪŠIAVIMAS PAGAL PAVARDES    |   0.000726 s  |  0.004635 s  |  0.037846 s  | 0.367553 s  |  5.026282 s |
+|LIST SKIRSTYMAS Į DVI GRUPES    |   0.000772 s  |  0.002384 s  |  0.017789 s  | 0.152420 s  |  1.785394 s |
 
 
 ## v0.4 ##
