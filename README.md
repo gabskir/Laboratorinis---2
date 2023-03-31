@@ -1,4 +1,33 @@
 # Laboratorinis-1
+## v0.5 ##
+
+### Programos veikimas ###
+
+Programos funkcionalumas nepakito nuo 0.4 versijos. Kodas perrašytas naudojant tris skirtingus konteinerius: 
+- std::vecotr
+- std::list
+- std::deque
+ir išsaugotas atskiruose aplankaluose, kad būtų galima efektyviai patikrinti programos veikimo spartą.
+
+### Testavimo sistemos parametrai ###
+
+**CPU**
+11th Gen Intel(R) Core (TM) i7-11370H @ 3.30GHz
+- *Base speed* 3.00 GHz
+- *Cores* 4
+- *Logical processors* - 8
+
+**RAM**
+- *Speed* 3200 MHz
+
+**Disk**
+- *Type* SSD
+- *Capacity* 477GB
+
+### Testavimo rezultatai ###
+
+
+
 
 ## v0.4 ##
 
