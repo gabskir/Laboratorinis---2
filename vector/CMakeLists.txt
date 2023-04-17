@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.26)
+project(Laboratorinis1_vektoriai)
+include_directories(include)
+file(GLOB SOURCES "src/*.cpp")
+add_executable(Laboratorinis1_vektoriai ${SOURCES})
