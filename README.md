@@ -1,4 +1,36 @@
 # Laboratorinis-1
+## v1.0 ##
+
+**Pakitimai nuo 0.5 versijos:** <br>
+- Pridėtas skirstymo į konteinerius strategijos pasirinkimas <br>
+- Pridėta skirstymo į konteinerius strategija <br>
+    
+**Dalinimas 1 strategija:** sukuriami du to paties tipo konteineriai, paliekant ir pagrindinį. Studentai, priklausomai nuo jų vidurkio paskirstomi į šiuos du naujus konteinerius. <br>
+**Dalinimas 2 strategija:** pasitelkiame algortimą remove_if. Patikrinamas studentų vidurkis, jei jis mažiau nei 5 - studento duomenys perkeliami į naują konteinerį ir ištrinami iš senojo. Tokiu būdu kuriamas tik vienas naujas konteineris. 
+
+### Rezultatai ###
+
+Testavimas atliktas naudojant 10000000 studentų failą:
+
+|         Vector            |      Dalinimo trukmė     |      RAM apkrova    |
+| ------------------------- | ------------------------ | ------------------- | 
+|1 strategija  |   1.102137 s  |  2829 MB  |
+|2 strategija    |   0.828649 s  | 2277 MB  |
+
+|         Deque            |      Dalinimo trukmė     |      RAM apkrova    |
+| ------------------------- | ------------------------ | ------------------- | 
+|1 strategija  |   1.131055 s  |  2973 MB  |
+|2 strategija    |   1.128316 s  | 19314 MB  |
+
+|         List            |      Dalinimo trukmė     |      RAM apkrova    |
+| ------------------------- | ------------------------ | ------------------- | 
+|1 strategija  |   2.077332 s  |  3449 MB  |
+|2 strategija    |   1.567896 s  | 2739 MB  |
+
+### Išvados ###
+Kaip matome pasitelkus antrą strategiją skirstymas vyksta greičiau, nes pritaikyti optimizuojantys algoritmai (remove_if). Taip pat naudojama kur kas mažiau atminties negu kuriant du naujus konteinerius. <br>
+Kalbant apie konteinerių palyginimą - šiuo atveju dalinimas greičiausias vector konteineriuose. Tačiau atsižvelgiant į 0.5 versijos analizę - LIST konteineris greičiausias. <br>
+
 ## v0.5 ##
 
 ### Programos veikimas ###
@@ -25,18 +57,27 @@ ir išsaugotas atskiruose aplankaluose, kad būtų galima efektyviai patikrinti 
 - *Capacity*: 477GB
 
 ### Testavimo rezultatai ###
+### VECTOR ###
 
 |                     |       1000      |      10000     |     100000    |   1000000   |   10000000  |
 | ------------------- | --------------- | -------------- | ------------- | ----------- | ----------- |
-|VECTOR NUSKAITYMAS   |   0.0045687 s  |  0.0299799 s  |    0.21992 s  |  2.17431 s  |  21.2355 s |
-|VECTOR RŪŠIAVIMAS PAGAL PAVARDES    |   0.000856 s  |  0.005860 s  |  0.092310 s  | 1.182300 s  |  18.303149 s |
-|VECTOR SKIRSTYMAS Į DVI GRUPES    |   0.000434 s  |  0.001352 s  |  0.013010 s  | 0.099363 s  |  1.144726 s |
-|DEQUE NUSKAITYMAS    |     0.0074389 s  |   0.028635 s  |    0.202629 s  | 2.16422 s  |  23.2499 s |
-|DEQUE RŪŠIAVIMAS PAGAL PAVARDES    |   0.001059 s  |  0.007357 s  |  0.114631 s  | 1.806220 s  | 19.157075 s |
-|DEQUE SKIRSTYMAS Į DVI GRUPES    |   0.000172 s  |  0.002472 s  |  0.012201 s  | 0.112860 s  |  0.916867 s |
-|LIST NUSKAITYMAS     |     0.0070122 s  |  0.023791 s  |  0.218323 s  |  2.25188 s  |   23.1721 s |
-|LIST RŪŠIAVIMAS PAGAL PAVARDES    |   0.000726 s  |  0.004635 s  |  0.037846 s  | 0.367553 s  |  5.026282 s |
-|LIST SKIRSTYMAS Į DVI GRUPES    |   0.000772 s  |  0.002384 s  |  0.017789 s  | 0.152420 s  |  1.785394 s |
+|Nuskaitymas   |   0.0045687 s  |  0.0299799 s  |    0.21992 s  |  2.17431 s  |  21.2355 s |
+|Rūšiavimas pagal pavardes    |   0.000856 s  |  0.005860 s  |  0.092310 s  | 1.182300 s  |  18.303149 s |
+|Skirstymas į dvi grupes    |   0.000434 s  |  0.001352 s  |  0.013010 s  | 0.099363 s  |  1.144726 s |
+
+### DEQUE ###
+|                     |       1000      |      10000     |     100000    |   1000000   |   10000000  |
+| ------------------- | --------------- | -------------- | ------------- | ----------- | ----------- |
+|Nuskaitymas    |     0.0074389 s  |   0.028635 s  |    0.202629 s  | 2.16422 s  |  23.2499 s |
+|Rūšiavimas pagal pavardes    |   0.001059 s  |  0.007357 s  |  0.114631 s  | 1.806220 s  | 19.157075 s |
+|Skirstymas į dvi grupes    |   0.000172 s  |  0.002472 s  |  0.012201 s  | 0.112860 s  |  0.916867 s |
+
+### LIST ###
+|                     |       1000      |      10000     |     100000    |   1000000   |   10000000  |
+| ------------------- | --------------- | -------------- | ------------- | ----------- | ----------- |
+|Nuskaitymas     |     0.0070122 s  |  0.023791 s  |  0.218323 s  |  2.25188 s  |   23.1721 s |
+|Rūšiavimas pagal pavardes    |   0.000726 s  |  0.004635 s  |  0.037846 s  | 0.367553 s  |  5.026282 s |
+|Skirstymas į dvi grupes    |   0.000772 s  |  0.002384 s  |  0.017789 s  | 0.152420 s  |  1.785394 s |
 
 
 ## v0.4 ##
