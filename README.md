@@ -1,3 +1,17 @@
+# Laboratorinis-2
+## v1.1 ##
+
+**Atliktos užduotys:** <br>
+- Šiame programos kode struktūra pakeista į klasę ir atlikti atitinkami pakeitimai visame kode.<br>
+- Atliktas versijų su struktūra ir klase greitaveikos palyginimas. <br>
+- Atlikta eksperimentinė analizė priklausomai nuo kompiliatoriaus optimizavimo lygio <br>
+
+**Struktūros ir klasės palyginimo rezultatai (naudota optimizuota vektoriaus konteinerio versija):** <br>
+|                     |     1000    |      10000    |      100000    |      1000000    |      10000000    |
+| ------------------------- | ------------------------ | ------------------- | ------------------- | ------------------- | ------------------- | 
+|Struktūra  |   0.047941 s  |  0.204295 s  | 1.350931 s| 13.051819 s| 86.972489 s|
+|Klasė    |   0.020343 s  | 0.136369 s| 0.960075 s| 8.126887 s| 86.972489 s|
+
 # Laboratorinis-1
 ## v1.0 ##
 
