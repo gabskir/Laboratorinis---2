@@ -7,10 +7,31 @@
 - Atlikta eksperimentinė analizė priklausomai nuo kompiliatoriaus optimizavimo lygio <br>
 
 **Struktūros ir klasės palyginimo rezultatai (naudota optimizuota vektoriaus konteinerio versija):** <br>
-|                     |     1000    |      10000    |      100000    |      1000000    |      10000000    |
-| ------------------------- | ------------------------ | ------------------- | ------------------- | ------------------- | ------------------- | 
-|Struktūra  |   0.047941 s  |  0.204295 s  | 1.350931 s| 13.051819 s| 86.972489 s|
-|Klasė    |   0.020343 s  | 0.136369 s| 0.960075 s| 8.126887 s| 86.972489 s|
+
+|            100000         |    class   |      struct    |
+| ------------------------- | ------------------------ | ------------------- | 
+|Nuskaitymas  |   0.299846 s |  0.267466 s  |
+|Rūšiavimas pagal pav | 0.114008 s   |   0.146160 s  |
+|Skaidymas į grupes    |   0.006849 s  |0.006874 s|
+|Spausdinimas į atskirus failus    |   1.1472625  | 1.562632|
+
+|            1000000         |    class   |      struct    |
+| ------------------------- | ------------------------ | ------------------- | 
+|Nuskaitymas  |   2.65631 s  |  2.49024 s  |
+|Rūšiavimas pagal pav | 1.000985 s   |   1.435960 s  |
+|Skaidymas į grupes    |   0.087408 s  |0.098000 s|
+|Spausdinimas į atskirus failus    |   6.228367  | 19.943464|
+
+**Kompiliatoriaus optimizavimo lygio rezultatų palyginimas:** <br>
+(atlikta su 100k dydžio failu)
+
+|                     |    Laikas   |      Programos dydis    |
+| ------------------------- | ------------------------ | ------------------- | 
+|03  |   1.119135 s  |  182 KB  |
+|02 | 1.156421 s   |   168 KB  |
+|01    |   1.173933 s  |174KB|
+|-    |   1.474768 s  | 393 KB|
+
 
 # Laboratorinis-1
 ## v1.0 ##
