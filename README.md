@@ -1,4 +1,14 @@
 # Laboratorinis-2
+## v1.2 ##
+Šioje versijoje pritaikyta "Rule of five". T.y. į klasę pridėta: <br>
+- copy constructor <br>
+- move constructor <br>
+- copy assignment operator <br>
+- move assignment operator <br>
+
+(destruktorius jau buvo nuo v1.1 versijos)<br>
+
+Taip pat realizuotas išvedimo operatorius.
 ## v1.1 ##
 
 **Atliktos užduotys:** <br>
