@@ -1,4 +1,7 @@
 # Laboratorinis-2
+## v1.5 ##
+Sukurta papildoma bazinė klasė *žmogus*, o klasė *studentas* paversta išvestine klase. Bazinė klasė padaryta abstrakčiąja. 
+
 ## v1.2 ##
 Šioje versijoje pritaikyta "Rule of five". T.y. į klasę pridėta: <br>
 - copy constructor <br>
