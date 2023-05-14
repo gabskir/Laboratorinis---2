@@ -1,4 +1,12 @@
 # Laboratorinis-2
+## v2.0 ##
+Šioje versijoje pridėta Doxygen dokumentacija, sukurtas setup.exe failas bei įvykdytas Unit Testing pasirinktoms funkcijoms, naudojant Google Test Framework. <br>
+**Įdiegimo instrukcija:**<br>
+1. Parsisiųskite failus iš v2.0 git repozitorijos. 
+2. Paleiskite atsisiųstą setup.exe failą
+3. Sekite instrukcijas iššokusiame lange (t.y. pasirinkite kompiuteryje vietą, kurioje bus saugoma atsisiųsta aplikacija)
+4. 3 punkte nurodytoje renginio vietoje rasite aplikaciją "V2.0". Ją paleiskite spustelėdami ant jos du kartus. Toliau tęskite darbą programoje.
+
 ## v1.5 ##
 Sukurta papildoma bazinė klasė *žmogus*, o klasė *studentas* paversta išvestine klase. Bazinė klasė padaryta abstrakčiąja. 
 
